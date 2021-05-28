@@ -48,8 +48,8 @@ var _notaDiario = _interopRequireDefault(require("./routes/notaDiario.routes"));
 // configurar express
 var cors = require('cors');
 
-var app = (0, _express["default"])();
-(0, _initialSetup.createRoles)();
+var app = (0, _express["default"])(); // createRoles();
+
 app.set('pkg', _package["default"]); // app.use(cors({origin: "http://localhost:4200"}));
 
 app.use(cors());

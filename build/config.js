@@ -5,6 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var _default = {
-  SECRET: 'getfit'
+  SECRET: 'getfit2'
 };
 exports["default"] = _default;

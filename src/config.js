@@ -1,3 +1,3 @@
 export default {
-    SECRET: 'getfit'
+    SECRET: 'getfit2'
 }

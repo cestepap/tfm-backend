@@ -31,7 +31,7 @@ import diarioRoutes from './routes/diario.routes';
 import notaDiarioRoutes from './routes/notaDiario.routes';
 
 const app = express();
-createRoles();
+// createRoles();
 
 app.set('pkg', pkg);
 // app.use(cors({origin: "http://localhost:4200"}));
