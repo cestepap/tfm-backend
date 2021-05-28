@@ -12,7 +12,7 @@ _mongoose["default"].connect(db_URI, {
   useFindAndModify: false,
   useCreateIndex: true
 }).then(function (db) {
-  return console.log('DB is connected');
+  return console.log('DB named thegymtool is connected');
 })["catch"](function (err) {
   return console.error(err);
 }); // mongoose
