@@ -38,8 +38,17 @@ export const createDiaSemanaDieta = async (req, res) => {
 		kcalTotalesDia,
 		comida,
 	});
-	const diaSemanaDietaSaved = await newDiaSemanaDieta.save();
-	res.status(201).json(diaSemanaDietaSaved);
+	// const diaSemanaDietaSaved = await newDiaSemanaDieta.save();
+
+	// if (!diaSemanaDietaSaved)
+	// 	return res
+	// 		.status(400)
+	// 		.json({ message: 'Error durante el proceso' });
+	// else {
+	// 	res.status(204).json(diaSemanaDietaSaved);
+	// }
+
+	res.status(204).json(req.body);
 };
 
 export const deleteDiaSemanaDietaById = async (req, res) => {

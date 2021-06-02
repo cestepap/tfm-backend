@@ -19,8 +19,6 @@ var _jsonwebtoken = _interopRequireWildcard(require("jsonwebtoken"));
 
 var _config = _interopRequireDefault(require("../config"));
 
-var _Role = _interopRequireDefault(require("../models/Role"));
-
 var signup = /*#__PURE__*/function () {
   var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(req, res) {
     var _req$body, username, email, password, rol, newUser, savedUser, token;
@@ -29,8 +27,7 @@ var signup = /*#__PURE__*/function () {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            _req$body = req.body, username = _req$body.username, email = _req$body.email, password = _req$body.password, rol = _req$body.rol; // const userFound = User.find({email})
-
+            _req$body = req.body, username = _req$body.username, email = _req$body.email, password = _req$body.password, rol = _req$body.rol;
             _context.t0 = _User["default"];
             _context.t1 = username;
             _context.t2 = email;
@@ -52,15 +49,15 @@ var signup = /*#__PURE__*/function () {
 
           case 12:
             savedUser = _context.sent;
-            console.log(savedUser); // permite crear un token. se le pasa el dato para generar el token, por lo general el id
-            // y una palabra secreta que traemos del config.
-            // el expiresIn es cuando cadua --> 1 dia
+            console.log(savedUser); // permite crear un token, pasando el id
+            // y una palabra secreta que traemos del fichero config.
+            // el expiresIn es cuando caduca --> 1 dia
 
             token = _jsonwebtoken["default"].sign({
               id: savedUser._id
             }, _config["default"].SECRET, {
               expiresIn: 86400
-            }); // res.status(200).json({ token });
+            });
 
             if (savedUser) {
               _context.next = 19;
@@ -146,7 +143,7 @@ var signin = /*#__PURE__*/function () {
             res.json({
               token: token,
               userFound: userFound
-            }); // res.json({ token, user: userFound });
+            });
 
           case 13:
           case "end":

@@ -13,7 +13,6 @@ const diaSemanaRutinaSchema = new Schema(
 		},
 		descripcion: {
 			type: String,
-			required: true,
 		},
 		detalleEjercicios: [
 			{

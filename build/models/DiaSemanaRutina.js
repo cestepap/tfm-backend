@@ -18,8 +18,7 @@ var diaSemanaRutinaSchema = new _mongoose.Schema({
     required: true
   },
   descripcion: {
-    type: String,
-    required: true
+    type: String
   },
   detalleEjercicios: [{
     // para referenciar con el modelo DetalleEjercicio dentro de un array

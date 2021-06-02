@@ -18,23 +18,23 @@ var diaSemanaDietaSchema = new _mongoose.Schema({
   },
   descripcion: {
     type: String,
-    required: true
+    "default": ''
   },
   proteinasTotalesDia: {
     type: String,
-    "default": ""
+    "default": ''
   },
   chsTotalesDia: {
     type: String,
-    "default": ""
+    "default": ''
   },
   grasasTotalesDia: {
     type: String,
-    "default": ""
+    "default": ''
   },
   kcalTotalesDia: {
     type: String,
-    "default": ""
+    "default": ''
   },
   comida: [{
     type: String

@@ -106,7 +106,7 @@ exports.getDiasSemanaDietaByDietaId = getDiasSemanaDietaByDietaId;
 
 var createDiaSemanaDieta = /*#__PURE__*/function () {
   var _ref4 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4(req, res) {
-    var _req$body, idDieta, nombre, descripcion, proteinasTotalesDia, chsTotalesDia, grasasTotalesDia, kcalTotalesDia, comida, newDiaSemanaDieta, diaSemanaDietaSaved;
+    var _req$body, idDieta, nombre, descripcion, proteinasTotalesDia, chsTotalesDia, grasasTotalesDia, kcalTotalesDia, comida, newDiaSemanaDieta;
 
     return _regenerator["default"].wrap(function _callee4$(_context4) {
       while (1) {
@@ -122,15 +122,18 @@ var createDiaSemanaDieta = /*#__PURE__*/function () {
               grasasTotalesDia: grasasTotalesDia,
               kcalTotalesDia: kcalTotalesDia,
               comida: comida
-            });
-            _context4.next = 4;
-            return newDiaSemanaDieta.save();
+            }); // const diaSemanaDietaSaved = await newDiaSemanaDieta.save();
+            // if (!diaSemanaDietaSaved)
+            // 	return res
+            // 		.status(400)
+            // 		.json({ message: 'Error durante el proceso' });
+            // else {
+            // 	res.status(204).json(diaSemanaDietaSaved);
+            // }
 
-          case 4:
-            diaSemanaDietaSaved = _context4.sent;
-            res.status(201).json(diaSemanaDietaSaved);
+            res.status(204).json(req.body);
 
-          case 6:
+          case 3:
           case "end":
             return _context4.stop();
         }

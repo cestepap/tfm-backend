@@ -12,23 +12,23 @@ const diaSemanaDietaSchema = new Schema(
 		},
 		descripcion: {
 			type: String,
-			required: true,
+			default: '',
 		},
-        proteinasTotalesDia: {
+		proteinasTotalesDia: {
 			type: String,
-			default: ""
+			default: '',
 		},
-        chsTotalesDia: {
+		chsTotalesDia: {
 			type: String,
-			default: ""
+			default: '',
 		},
-        grasasTotalesDia: {
+		grasasTotalesDia: {
 			type: String,
-			default: ""
+			default: '',
 		},
 		kcalTotalesDia: {
 			type: String,
-			default: ""
+			default: '',
 		},
 		comida: [
 			{
